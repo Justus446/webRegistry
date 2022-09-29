@@ -1,27 +1,18 @@
 from rest_framework import serializers
 
-from .models import Patient, Role, Person, Item
+from .models import Facility, Client
 
 
-class patientSerializer(serializers.ModelSerializer):
+class clientSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Patient
+        model = Client
         fields = '__all__'
 
 
-class itemSerializer(serializers.ModelSerializer):
+class facilitySerializer(serializers.ModelSerializer):
     class Meta:
-        model = Item
+        model = Facility
         fields = '__all__'
 
 
-class roleSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Role
-        fields = '__all__'
 
-
-class personSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Person
-        fields = '__all__'
